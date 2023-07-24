@@ -34,7 +34,7 @@ julia> X = Matrix{Bool}([
 ]);
 ```
 Now evaluate:
-```
+```julia-repl
 julia> exact_cover(M)
 3-element Vector{Int64}:
  2
@@ -59,10 +59,10 @@ function exact_cover(X::Matrix{Bool})
         # by number of 1's, it suffices to consider the first column.
         sum(X[:, col_order[1]]) == 0 && return false
         for c in col_order
-            # Arbirarily try out a column.
+            # Arbitrarily try out a column.
             selected_col = @view X[:, c]
             for r in findall(selected_col)
-                # Arbirarily try out a row.
+                # Arbitrarily try out a row.
                 selected_row = @view X[r, :]
                 # The row chosen covers a specific set of columns; these columns
                 # need no longer be considered in the next iteration of solve().
