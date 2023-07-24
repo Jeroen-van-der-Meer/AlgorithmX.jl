@@ -1,0 +1,4 @@
+name = "AlgorithmX"
+uuid = "714811c2-d489-425f-9394-51f940b38e97"
+authors = ["Jeroen van der Meer <jeroen.van.der.meer@asml.com>"]
+version = "0.1.0"
